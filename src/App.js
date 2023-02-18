@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// @flow
+
+import { Routes, Route } from "react-router-dom";
+import Home from "./routes/home/home.component";
+import CustomerSignin from "./routes/signin/customer-signin.component";
+import AdminSignin from "./routes/signin/admin-signin.component";
+import Checkout from "./routes/checkout/checkout.component";
+export const Array = [99, true, "App", 45.35, false];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth1" element={<CustomerSignin />} />
+        <Route path="/auth2" element={<AdminSignin />} />
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
     </div>
   );
 }
