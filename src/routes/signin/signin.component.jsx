@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { SignInContainer, ButtonContainer } from "./signin.styles";
 import InputForm from "./input-form.component";
 
-const defaultFormFields = {
+const initialFormFields = {
   userid: "",
   password: "",
 };
 
 const Signin = () => {
-  const [formFields, setFormFields] = useState(defaultFormFields);
+  const [formFields, setFormFields] = useState(initialFormFields);
   const { userid, password } = formFields;
   const [userData, setUserData] = useState([]);
   const navigate = useNavigate();
@@ -53,12 +53,12 @@ const Signin = () => {
     } else {
       document.getElementById("err").innerHTML = "Invalid Sign In Attempt!";
       document.getElementById("err").style.display = "block";
-      setFormFields(defaultFormFields);
+      setFormFields(initialFormFields);
     }
   };
 
   const resetForm = () => {
-    setFormFields(defaultFormFields);
+    setFormFields(initialFormFields);
     document.getElementById("err").style.display = "none";
   };
 
