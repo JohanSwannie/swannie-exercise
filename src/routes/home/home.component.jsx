@@ -14,7 +14,7 @@ const Home = () => {
     <Fragment>
       <NavigationContainer>
         <BusinessName>
-          Swannie's Flower Online Store - A few clicks is all it takes!
+          Swannie's Flower Store - A few clicks is all it takes!
         </BusinessName>
         <NavLinks>
           <NavLink to="/auth1">SIGN IN</NavLink>
